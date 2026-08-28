@@ -1,10 +1,10 @@
 #include<iostream>
 
-void values(int arr[], int size) {
+void values(int arr[], int size) { // dentro de los parentesis de una funcion se declaran los argumentos
 
     for(int i=0; i<=size; i++) {
 
-        std::cout << arr[i] << std::endl;
+        std::cout << arr[i] << std::endl; // con cada iteracion, el array imprime los digitos
 
     }
 
