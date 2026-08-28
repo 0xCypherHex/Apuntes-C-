@@ -6,10 +6,13 @@ int main () {
     char c='Z';
     float d=8.91234;
 
-    printf("%X%i%c%.3f", a, b, c, d);
+    printf("%X%i%c%.3f", a, b, c, d , "\n");
 
     // el %.3f le dice que solo imprima los primeros tres decimales
     // %X imprime su valor en hexadecimal
+
+    char msg[] = "¡Bienvenido a C!";
+    printf("%s", msg, " Te divertiras \n");
 
     return 0;
 }

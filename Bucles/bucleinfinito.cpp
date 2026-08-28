@@ -4,11 +4,11 @@
 int main () {
 
     while (true){
-        std::cout << "holiwinis" << std::endl;
+        std::cout << "hola" << std::endl;
     }
 
     for (;;) {
-        std::cout << "holiwinis" << std::endl;
+        std::cout << "hola << std::endl;
     }
 
 }
