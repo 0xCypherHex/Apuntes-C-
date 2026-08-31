@@ -47,7 +47,7 @@ int main () {
 
         for (int i=0; i <= 20; i++){
 
-            if (i % 2) {
+            if (i % 2) { // evalua si el numero tiene modulo, si es positivo lo omite y no lo imprime
                 continue;
             }
 

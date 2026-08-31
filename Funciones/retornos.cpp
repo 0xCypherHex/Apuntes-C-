@@ -12,5 +12,5 @@ int main () {
     int number = function_name();
     std::cout << number << std::endl;
 
-
+    return 0;
 }

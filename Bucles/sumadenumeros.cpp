@@ -11,7 +11,7 @@ int main () {
         int num=0;
         std::cin >> num;
         sum += num;
-
+        
     }
 
     std::cout << sum << std::endl;

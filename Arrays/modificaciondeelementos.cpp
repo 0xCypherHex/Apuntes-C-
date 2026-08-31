@@ -18,11 +18,13 @@ int main() {
     std::cout << "Nuevo elemento: ";    
         std::getline(std::cin, newElement);
 
-    
 
     for(int i=0; i<=n; i++) {
 
+        arr
         std::cout << arr[i] << std::endl;
+
+
 
     }
 
