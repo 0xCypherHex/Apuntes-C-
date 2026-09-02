@@ -2,7 +2,7 @@
 #include<cstdlib>
 
 int main() {
-
+hola
     
     int iCantidadPersonas=0;
     int iSumaEdades=0; 
