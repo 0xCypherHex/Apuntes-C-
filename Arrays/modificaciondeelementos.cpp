@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include <string>
 #include <vector>
 
@@ -15,7 +16,7 @@ int main() {
         return 1;
     }
 
-    std::vector<std::string> arr(n);
+    std::vector<std::string> arr(n); // Crear un vector de tamaño n para almacenar los elementos
     std::cin.ignore();
 
     for (int i = 0; i < n; i++) { // Solicitar al usuario que ingrese los elementos del array
