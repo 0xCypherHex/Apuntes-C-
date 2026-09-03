@@ -7,7 +7,7 @@ int main () {
     int n = 0;
 
     std::cout << "Cantidad de elementos de 0 a: ";
-    std::cin >> n;
+        std::cin >> n;
 
     if (n <= 0) {
         std::cout << "La cantidad debe ser mayor que cero." << std::endl;
@@ -15,13 +15,15 @@ int main () {
     }
 
     std::string array[n]; // Crear un array de tamaño n para almacenar los elementos
-    std::cin.ignore();
+        std::cin.ignore();
 
     for (int i = 0; i < n; i++) { // Solicitar al usuario que ingrese los elementos del array
+       
         std::cout << "Elemento " << i << ": ";
         std::string val;
-        std::cin >> val;
+            std::cin >> val;
         array[i] = val;
+
     }
 
     std::cout << "Elementos del array: " << std::endl;
