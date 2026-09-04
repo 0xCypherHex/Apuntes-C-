@@ -9,7 +9,7 @@
 /*
     sintaxis basica:
 
-    for (data_type element : array) {   La variable elemen contentra el elemento actual de cada iteracion
+    for (data_type element : array) {   La variable element almacena  el elemento actual de cada iteracion
     // Código a ejecutar para cada elemento
 }
 
@@ -30,7 +30,7 @@ int main() {
         std::cout << number << std::endl;
 
     }
-
+ 
     // Ejemplo dos
 
     std::string fruits[] = {"apple", "kiwi", "pineapple", "orange", "grape", "banana"};
@@ -58,26 +58,26 @@ int main() {
     // A diferencia del arreglo tradicional, std::array conoce su tamano
     // y ofrece metodos como .size() y .at().
 
-    std::array<int, 5> modernNumbersForAverage = {1, 2, 3, 4, 5};
-    double sumaPromedio = 0;
+    std::array<int, 5> numbersForAverage = {1, 2, 3, 4, 5};
+    double sumAverage = 0;
     
-    for (int number : modernNumbersForAverage) {
-        sumaPromedio += number;
+    for (int number : numbersForAverage) {
+        sumAverage += number;
     }
    
-    double average = sumaPromedio / modernNumbersForAverage.size();
+    double average = sumAverage / numbersForAverage.size();
     std::cout << "Average: " << average << std::endl;
 
     // Ejemplo cinco
 
-    std::array<int, 5> modernNumbersForMaximum = {1, 5, 2, 9, 3};
-    int maxValue = modernNumbersForMaximum[0];
+    std::array<int, 5> numbersForMaximum = {1, 5, 2, 9, 3};
+    int maxValue = numbersForMaximum[0];
    
-    for (int i = 1; i < modernNumbersForMaximum.size(); i++) {
+    for (int i = 1; i < numbersForMaximum.size(); i++) { // El iterador empieza en 1 porque maxvalue esta en la primera posicion y no se deberia evaluar la misma posicion consigo misma
        
-        if (modernNumbersForMaximum[i] > maxValue) {
+        if (numbersForMaximum[i] > maxValue) {
        
-            maxValue = modernNumbersForMaximum[i];
+            maxValue = numbersForMaximum[i];
        
         }
     }
@@ -86,13 +86,13 @@ int main() {
 
     // Ejemplo seis
 
-    std::array<int, 5> modernNumbersForMinimum = {1, 5, 2, 9, 3};
-    int minValue = modernNumbersForMinimum[0];
+    std::array<int, 5> numbersForMinimum = {6, 5, 2, 9, 3};
+    int minValue = numbersForMinimum[0];
 
-    for (int i = 1; i < modernNumbersForMinimum.size(); i++) {
-        if (modernNumbersForMinimum[i] < minValue) {
+    for (int i = 1; i < numbersForMinimum.size(); i++) {
+        if (numbersForMinimum[i] < minValue) {
         
-            minValue = modernNumbersForMinimum[i];
+            minValue = numbersForMinimum[i];
     
         }   
     }
