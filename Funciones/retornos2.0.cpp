@@ -33,7 +33,7 @@ int main (){
             
         
         double numero = numero_mas_grande(num1,num2);
-        numero_dividido = numero/2;
+        double numero_dividido = numero / 2;
 
         if (num1 >= num2) {
             num1 = numero_dividido;
