@@ -84,7 +84,7 @@ int main() {
     
     double* stats = calculateStats(arr, numberElements); // Llamada a la funcion que calcula las estadisticas y devuelve un puntero a un array de 4 elementos
     std::cout << "Sum: " << stats[0] << std::endl;
-    std::cout << "Average: " << stats[1] << std::endl;
+    std::cout << "Average: " << stats[1] << std::endl; // Con stats hacemos a la llamada donde guarda el resultado en la funcion
     std::cout << "Maximum: " << stats[2] << std::endl;
     std::cout << "Minimum: " << stats[3] << std::endl;
     delete[] stats;
