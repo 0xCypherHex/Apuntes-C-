@@ -17,11 +17,14 @@
 
 int main() {
 
-    std::string str = "Hello, Wordl!";
+    std::string str = "Hello, World!";
 
     std::cout << "Cadena actual: " << str << std::endl;
 
-    str.erase(5,6);
+    int firstSpace = str.find("World");
+    std::cout << firstSpace << std::endl;
+
+    str.erase(5,7); // borra desde la poscion 5 mas los siguientes 7 caracteres 
     std::cout << str << std::endl;
 
     str.clear();
