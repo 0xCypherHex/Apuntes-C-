@@ -12,7 +12,7 @@ int main(void) {
     // Operador de asignación compuesta (iPuntos += 5 equivale a iPuntos = iPuntos + 5)
     iPuntos += 5; 
 
-    printf("Residuo de 14 %% 3: %d\n", iResiduo);
+    printf("Residuo de 14 %% 3: %d\n", iResiduo); // El dobre % imprime el simbolo
     printf("Puntos acumulados: %d\n", iPuntos);
 
     return 0; // Finaliza la función principal
