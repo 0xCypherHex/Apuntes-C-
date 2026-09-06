@@ -3,7 +3,7 @@
 
 void stringSearchOperations(std::string str){
 
-      // Encontrar el primer espacio
+    // Encontrar el primer espacio
     int findFirstSpace = str.find(" ");
     std::cout << "Space Found At: " << findFirstSpace << std::endl;
 
