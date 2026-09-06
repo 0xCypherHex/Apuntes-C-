@@ -3,7 +3,7 @@
 
 // Funcion para concatenar dos cadenas
 
-std::string concatenateStrings(string str1, std::string str2){
+std::string concatenateStrings(std::string str1, std::string str2){
 
     std::string result = str1 + " " + str2;
 
