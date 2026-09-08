@@ -46,25 +46,20 @@ int main() {
 
     }
 
-    if (lenghtFirstArr >= lenghtSecondArr) {
+    
 
-        for (int i = 0; i < lenghtFirstArr; i++){
+    for(int i=0; i <= lenghtFirstArr - lenghtSecondArr; i++){ // Este bucle itera restando la cantidad de elementos de los arrays, esto para obtener una cadena de tal tamaño que sera comparada
+        bool coincidence = true; 
 
+        for(int j = 0; j < lenghtSecondArr; j++){
+            if(arr1[i + j] != arr2[j]){
 
-
+            }
         }
-
-
     }
     
-    else if (lenghtSecondArr >= lenghtFirstArr) {
-
-        for (int i = 0; i < lenghtSecondArr; i++){
 
 
-        }
-
-    } 
        
     return 0;
 }
