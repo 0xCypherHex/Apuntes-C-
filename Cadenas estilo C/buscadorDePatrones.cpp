@@ -27,9 +27,12 @@ int main() {
     int arr2[lenghtSecondArr];
 
     // Insertamos valores para el primer arreglo
+
+    std::cout << "Elementos del primer arreglo." << std::endl;
+
     for(int i = 0; i < lenghtFirstArr; i++){
 
-        std::cout << "Inserte elemnto " << i << ": ";
+        std::cout << "Inserte elemento " << i << ": ";
         int val = 0;
             std::cin >> val;
         arr1[i] = val;
@@ -37,6 +40,9 @@ int main() {
     } 
 
     // Insertamos valores para el segundo arreglo
+
+    std::cout << "Elementos del segundo arreglo." << std::endl;
+
     for(int i=0; i < lenghtSecondArr; i++){
 
         std::cout << "Inserte elemento  " << i << ": ";
@@ -49,12 +55,32 @@ int main() {
     
 
     for(int i=0; i <= lenghtFirstArr - lenghtSecondArr; i++){ // Este bucle itera restando la cantidad de elementos de los arrays, esto para obtener una cadena de tal tamaño que sera comparada
+     
         bool coincidence = true; 
 
         for(int j = 0; j < lenghtSecondArr; j++){
+        
             if(arr1[i + j] != arr2[j]){
 
+                coincidence = false; 
+               
+                break;
             }
+         
+            }
+
+
+        if(coincidence == false){
+
+            std::cout << "No hay coincidencias." << std::endl;
+
+        }
+
+        if(coincidence){
+
+        std::cout << "Hay coincidencias." << std::endl;
+
+            break;
         }
     }
     
