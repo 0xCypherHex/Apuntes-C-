@@ -13,10 +13,10 @@ int main() {
     
       for(int i=0; i < n; i++) {
 
-        int mn = 1;
-        std::string str(mn, '*');
+        int cantidad = 2 * i + 1;
+        std::string str(cantidad, '*');
         std::cout << str << std::endl;
-        mn += 1;
+        
     }
 
 
