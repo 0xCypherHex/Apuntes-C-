@@ -2,7 +2,7 @@
 #include<string>
 
 /*
-    Mas funciones utiles para cedenas de texto
+    Mas funciones utiles para cadenas de texto
 
     str.erase(pos, len); Elimina len caracteres comenzando en la posicion pos de la cadena actual
 
