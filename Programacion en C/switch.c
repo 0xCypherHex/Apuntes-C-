@@ -7,7 +7,7 @@ int main(void) {
     printf("1. Consultar Saldo\n2. Depositar\n3. Retirar\nSeleccione una opción: ");
     scanf("%d", &iOpcion);
 
-    switch (iOpcion) {
+    switch (iOpcion) { // switch solo acepta int, char y enum
         case 1:
             printf("Su saldo actual es de $1,000.00\n");
             break;
