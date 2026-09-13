@@ -80,7 +80,7 @@ int main() {
         // Este bucle compara el patrón con una porción contigua del primer arreglo.
         // j recorre cada elemento del patrón y compara arr2[j] con arr1[i + j].
         // Cuando se compara una posición, se mueve a la siguiente en ambos arreglos.
-        for(int j = 0; j < lenghtSecondArr; j++){
+        for(int j = 0; j < lenghtSecondArr; j++){ // se va  detener al llegar al tamano del segundo arreglo
 
             if(arr1[i + j] != arr2[j]){
                 // Si en alguna posición no coinciden, el patrón no está ahí.
