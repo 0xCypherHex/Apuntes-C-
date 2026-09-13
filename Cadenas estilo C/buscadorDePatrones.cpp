@@ -67,13 +67,13 @@ int main() {
 
     // Esta variable guarda el resultado final.
     // Empieza en false y cambia a true si se encuentra el patrón.
-    bool encontrado = false;
+    bool findedCoincidence = false;
 
     // Este bucle recorre todas las posiciones posibles del arreglo principal donde puede empezar el patrón.
     // Por ejemplo, si arr1 tiene 5 elementos y arr2 tiene 2, i puede valer 0, 1, 2, 3.
     // Se usa i <= lenghtFirstArr - lenghtSecondArr para no salirnos del rango.
-    for(int i = 0; i <= lenghtFirstArr - lenghtSecondArr; i++){
-
+    for(int i = 0; i <= lenghtFirstArr - lenghtSecondArr; i++){ // Se resta arreglo dos de arreglo uno para calcular cuantas posiciones de inicio son validas para que el patron se compare solo con una porcion contigua del primer arreglo no todo
+        
         // Suponemos que en esta posicion hay coincidencia.
         bool coincidence = true;
 
@@ -91,13 +91,13 @@ int main() {
 
         // Si en esta posición sí coincidieron todos, entonces encontramos el patrón.
         if(coincidence){
-            encontrado = true;
-            break; // Sale del bucle externo porque ya no hace falta seguir buscando.
+            findedCoincidence = true;
+            break; // Sale del bucle externo porque ya no hace falta seguir buscando (solo si coincidio).
         }
     }
 
     // Imprime el resultado final una sola vez.
-    std::cout << std::boolalpha << encontrado << std::endl;
+    std::cout << std::boolalpha << findedCoincidence << std::endl;
 
     return 0;
 }
