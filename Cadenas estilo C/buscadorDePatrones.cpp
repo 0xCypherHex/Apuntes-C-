@@ -90,7 +90,7 @@ int main() {
         }
 
         // Si en esta posición sí coincidieron todos, entonces encontramos el patrón.
-        if(coincidence){
+        if(coincidence){ // si coindicence es false el ciclo externo vuelve a iterar
             findedCoincidence = true;
             break; // Sale del bucle externo porque ya no hace falta seguir buscando (solo si coincidio).
         }
