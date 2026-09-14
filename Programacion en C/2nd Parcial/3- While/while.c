@@ -83,9 +83,10 @@ void Menu(){
         pritnf("Cual opcion quieres:\n");
         scanf("%d",&opcion);
         if (opcion == 1){
-            printf("Introduce los Pesos: ")s;
+            printf("Introduce los Pesos: ");
             scanf("%d",&peso);
-            peso = peso * 
+            peso = peso / dolar;
+            printf("Resultado: %.2f\n", peso);
 
         }
     }
