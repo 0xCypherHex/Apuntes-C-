@@ -15,7 +15,7 @@ void EjercicioPar(){
 
 void EjercicioULAM(){
 
-    int i;
+    int i = 0;
     int length = 1;
     int Max = 0;
 
