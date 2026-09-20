@@ -4,31 +4,49 @@
 
 int main(void) {
 
-    float  fPrecioProducto = 0.0;
+    float  fPrecioProducto = 0.0f;
 
-    float fTotalArticulos = 0.0;
+    float fTotalCompra = 0.0f;
 
+    int iTerador = 1; // Contador de productos
+    
+    printf("Ingrese el precio del articulo %d: ",iTerador);
+            scanf("%f", &fPrecioProducto);
+
+    fTotalCompra = fPrecioProducto;
+    
     while (fPrecioProducto > 0.0){
-        
-        int i = 1;
-        
-        printf("Ingrese el precio del articulo ", i , ": ");
+       
+        iTerador++;
+        printf("Ingrese el precio del articulo %d: ",iTerador);
             scanf("%f", &fPrecioProducto);
 
 
-        fTotalArticulos += fTotalArticulos + fPrecioProducto;
-        i++;
+        fTotalCompra += fPrecioProducto;
+        
     }
 
-    float fTotalConDescuento = 0.0;
+    float fTotalConDescuento = 0.0f;
+    float fDescuento = 0.0f;
 
-    if (fTotalArticulos > 1000.00) {
+    if (fTotalCompra >= 1000.00f) {
 
-    fTotalConDescuento = fTotalArticulos - (fTotalArticulos * 10);
+        fDescuento = fTotalCompra / 10;
+        fTotalConDescuento = fTotalCompra - fDescuento;
+
+        printf("Subtotal: %.2f\n", fTotalCompra);
+        printf("Descuento: %.2f\n", fDescuento);
+        printf("Total: %.2f\n", fTotalConDescuento);
 
     }
+      else {
 
-    printf("Subtotal: %.2f/n", fTotalArticulos);
+        printf("Subtotal: %.2f\n", fTotalCompra);
+        printf("Descuento: %.2f\n", fDescuento);
+        printf("Total: %.2f\n", fTotalCompra);
+    
+    }
+
 
     return 0;
 }
