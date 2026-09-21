@@ -10,7 +10,8 @@ int main() {
     // Declarar la variable data
     int data = 42;
     
-    int* ptr; // Declaramos un puntero
+    int* ptr; // Declaramos un puntero 
+
 
 
     if (input == "valid"){
@@ -37,7 +38,7 @@ int main() {
 
     }
 
-
+   \
     
     return 0;
 }
