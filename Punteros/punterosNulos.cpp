@@ -31,7 +31,7 @@ int main(void) {
 
         std::cout << "Es seguro usar el puntero aqui." << std::endl;
 
-        int value = *ptr;
+        int value = *ptr; //  value almacena el valor de ptr
 
         
     }
