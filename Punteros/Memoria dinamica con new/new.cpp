@@ -40,8 +40,13 @@ int main (void) {
 
 
     // La regla fundamental de gestión de memoria dinámica es sencilla: por cada new debe haber un delete correspondiente.
-
+    // Despues de llamar a delete en un puntero, ese puntero se vuelve inválido y no debe usarse de nuevo.
+    
     delete ptr; // Liberamos la memoria
+
+    // Es una buena práctica establecer el puntero a nullptr después de eliminarlo para evitar usarlo accidentalmente.
+
+    ptr = nullptr;
 
     
 
