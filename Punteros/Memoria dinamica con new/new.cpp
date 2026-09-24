@@ -8,12 +8,14 @@
     A diferencia de las variables regulares que se crean en el stack, la memoria asignada dinámicamente persiste 
     hasta que la liberes explícitamente.
 
-    * Stack - la pila  (Memoria Automática):
+    * Stack - la pila  (Memoria Automática o estatica): 
       El stack es como tu escritorio de tu área de trabajo, es un espacio pequeño, súper rápido y muy organizado.
       Se llama "pila" porque funciona como una pila de platos: el último plato que pones encima es el primero que quitas.
       La variables regulares (ej. int edad=20 en una funcion) que creas normalmente, se pone en este escritorio.
       Cuando la funcion termina su trabajo, el programa "limpia el escritorio" automáticamente. La variable se destruye y
       la memorisa se libera sin que tú tengas que hacer nada.
+      
+      Además la memoria estática no cambia ni su direccion ni su tamaño en tiempo de ejecución.
 
     * Heap (Memoria Dinámica):
       El heap es como un almacén, es un espacio inmenso (casi toda la ram) pero desorganizado. Para guardar ahi algo tienes que pedir permiso
@@ -21,6 +23,8 @@
       La palabra clave new (ej. new jugador), le estas diciendo al sistema que necesitas un espacio en la gran bodega para guardar este objeto.
       A diferencia del stack que se limpia solo, la bodega (heap) no. Lo que metes ahí se queda para siempre ahí
       incluso si la función que la creó ya terminó. En c++ es tu responsabilidad usar el comando delete para deciler al sistema que ya no ocupas ese espacio.
+
+      La memoria dinámica puede cambiar tu tamaño y dirección en tiempo de ejecución.
 
  */
 
