@@ -49,7 +49,7 @@ public:
 
      static float promedio(int n){
 
-        float suma = sumarNumeros(n);
+        float suma = sumarNumeros(n); // Llamamos a la primera funcion
 
         return suma / n;
     }
