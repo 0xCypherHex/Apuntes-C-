@@ -13,7 +13,48 @@ Los vectores proporcionan la comodidad de la gestión automática de la memoria,
 
 */
 
+// CREACION DE UN VECTOR
+
+/*
+``El enfoque mas facil es crear un vector que puedas llenarlo mas adelante:
+
+  std::vector<int> numbers;
+
+  Esto crea un vector vacio llamado numbers que puede contener enteros. Adentro de los corchetes angulares <int> indicamos el tipo de dato.
+
+  Tambien puedes inicializar un vector con valores desde el principio usando una lista de inicializacion.
+
+  std::vector<int> scores = {85, 34, 55, 45, 92};
+*/
+
 #include<iostream>
 #include<vector>
 
-// CREACION DE UN VECTOR
+int main(void) {
+
+    std::vector<std::string> elements;
+
+    int n;
+
+    std::cout << "Inserte cantidad de elementos a insertar: ";
+        std::cin >> n;
+
+    for(int i = 1; i <= n; i++){
+
+        std::string val;
+
+        std::cout << "Ingrese el elemento " << i << ": ";
+            std::cin >> val;
+
+        elements[i] = val;
+    }
+
+
+    for (int i = 1; i <= size(elements); i++){
+
+        std::cout << "El elemento " << i << "es: " << elements[i] << std::endl;
+
+    }
+
+    return 0;
+}
