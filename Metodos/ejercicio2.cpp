@@ -21,7 +21,52 @@ la misma dirección de memoria. En los lenguajes que admiten parámetros de env�
 parámetro en la codificación. Esto indica que el argumento le debe enviar al parámetro su dirección de memoria.
 
 
-
-
 */
+
+// Este ejercicio es el mismo que el ejercicio1 pero explica como se invoca al metodo por medio de la clase
+
+class calcularPromedio {
+
+public:
+     static float sumarNumeros(int n) {
+
+        float suma = 0;
+        int valor = 0; 
+
+          for (int i = 1; i <= n; i++ ) {
+
+            std::cout << "Ingrese el número " << i << ": ";
+            std::cin >> valor;
+
+            suma += valor;
+        }
+
+        return suma;
+    }
+
+     static float promedio(int n){
+
+        float suma = sumarNumeros(n); // Llamamos a la primera funcion
+
+        return suma / n;
+    }
+
+}; // Las clases terminan en punto y coma.
+
+
+int main(void) {
+    int cantidad = 0;
+
+    std::cout << "Digite la cantidad de numero a promediar: ";
+        std::cin >> cantidad;
+
+
+    // Aqui se invoca al método por medio de su variable    
+
+    float resultado = calcularPromedio::promedio(cantidad); // Llamamos a la clase calcularPromedio y a la funcion promedio
+
+    std::cout << "El promedio es: " << resultado << std::endl;
+
+    return 0;
+}
 
