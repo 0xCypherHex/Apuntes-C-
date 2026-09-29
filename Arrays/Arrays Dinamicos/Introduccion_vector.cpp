@@ -50,11 +50,21 @@ int main(void) {
         elements.push_back(val); // push_back redimensiona el vector y agrega el valor al final
     }
 
-    int contador = n;
+    if (elements.empty()){
+
+        std::cout << "No hay elementos para mostrar." << std::endl;
+        
+        return 0;
+
+    }
+
+    std::string *contador = &elements.back(); // Apuntamos el puntero al ultimo elemento del vector
 
     for(int i = 0; i <= n; i++){
 
-        std::cout << "El elemento " << contador << " es: " << elements[contador] << std::endl;
+        long index = contador - elements.data();
+
+        std::cout << "El elemento " << index << " es: " << *contador << std::endl;
 
         contador--;
     }
