@@ -29,6 +29,7 @@ Los vectores proporcionan la comodidad de la gestión automática de la memoria,
 
 #include<iostream>
 #include<vector>
+#include<string>
 
 int main(void) {
 
@@ -39,21 +40,23 @@ int main(void) {
     std::cout << "Inserte cantidad de elementos a insertar: ";
         std::cin >> n;
 
-    for(int i = 1; i <= n; i++){
+    for(int i = 0; i <= n; i++){
 
         std::string val;
 
         std::cout << "Ingrese el elemento " << i << ": ";
             std::cin >> val;
 
-        elements[i] = val;
+        elements.push_back(val); // push_back redimensiona el vector y agrega el valor al final
     }
 
+    int contador = n;
 
-    for (int i = 1; i <= size(elements); i++){
+    for(int i = 0; i <= n; i++){
 
-        std::cout << "El elemento " << i << "es: " << elements[i] << std::endl;
+        std::cout << "El elemento " << contador << " es: " << elements[contador] << std::endl;
 
+        contador--;
     }
 
     return 0;
