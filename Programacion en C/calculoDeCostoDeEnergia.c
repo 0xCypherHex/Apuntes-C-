@@ -1,33 +1,35 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main(void) {
 
-    const float fPrecioPorkWh = 1.85f;
-    const float fCargoPorServicios = 85.00f;
-    const float fIva = 0.16f;
+  typedef struct {
 
-    float fLecturaAnterior = 0;
-    float fLecturaActual = 0;
+    const float fPrecioPorkWh;
+    const float fCargoPorServicios;
+    const float fIva;
 
-    
+  } valores_de_entrada;
 
-    printf("Lectura anterior del medidor: ");
-        scanf("%f", &fLecturaAnterior);
-    
-    printf("Lectura actual del medidor: ");
-        scanf("%f", &fLecturaActual);
+  valores_de_entrada p1 = {1.85f, 85.00f, 0.16f};
 
+  float fLecturaAnterior = 0;
+  float fLecturaActual = 0;
 
-    float fConsumoTotal = fLecturaActual - fLecturaAnterior;
+  printf("Lectura anterior del medidor: ");
+  scanf("%f", &fLecturaAnterior);
 
-    float fCostoPorConsumoTotal = fConsumoTotal * fPrecioPorkWh;
+  printf("Lectura actual del medidor: ");
+  scanf("%f", &fLecturaActual);
 
-    float fSubTotal = fCostoPorConsumoTotal + fCargoPorServicios;
+  float fConsumoTotal = fLecturaActual - fLecturaAnterior;
 
-    float fMontoTotal = fSubTotal + (fSubTotal*fIva);
+  float fCostoPorConsumoTotal = fConsumoTotal * p1.fPrecioPorkWh;
 
-    printf("El Monto total por su consumo electrico es : $%.2f\n", fMontoTotal);
+  float fSubTotal = fCostoPorConsumoTotal + p1.fCargoPorServicios;
 
+  float fMontoTotal = fSubTotal + (fSubTotal * p1.fIva);
 
-    return 0;
+  printf("El Monto total por su consumo electrico es : $%.2f\n", fMontoTotal);
+
+  return 0;
 }

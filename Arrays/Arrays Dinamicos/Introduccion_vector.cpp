@@ -62,6 +62,7 @@ int main(void) {
 
     for(int i = 0; i <= n; i++){
 
+        // elements.data() es el inicio, restando obtenemos el indice.
         long index = contador - elements.data();
 
         std::cout << "El elemento " << index << " es: " << *contador << std::endl;
