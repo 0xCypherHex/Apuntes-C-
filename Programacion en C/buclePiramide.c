@@ -9,15 +9,16 @@ int main(void) {
   printf("Digite la cantidad de filas: ");
   scanf("%d", &iFilas);
 
-  for (int i = 0; i < iFilas; i++) {
+  for (int iContadorFilas = 0; iContadorFilas < iFilas; iContadorFilas++) {
 
     // Imprimir espacios
-    for (int j = 0; j < iFilas - i - 1; j++) {
+    for (int iEspacios = 0; iEspacios < iFilas - iContadorFilas - 1;
+         iEspacios++) {
       printf(" ");
     }
 
     // Imprimir asteriscos
-    for (iAsteriscos = 0; iAsteriscos < 2 * i + 1; iAsteriscos++) {
+    for (iAsteriscos = 0; iAsteriscos < 2 * iContadorFilas + 1; iAsteriscos++) {
       printf("*");
     }
 
