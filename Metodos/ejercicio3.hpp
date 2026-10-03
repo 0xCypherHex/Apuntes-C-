@@ -15,6 +15,9 @@
     tiene acceso a ellos y, si intenta usarlos, el compilador lanzará un error.
 
 */
+
+//  SIN COMPLETAR
+
 #include <iostream>
 
 class sumPro {
