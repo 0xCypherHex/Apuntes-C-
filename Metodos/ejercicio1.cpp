@@ -1,18 +1,20 @@
-#include<iostream>
-#include<cstdlib>
+#include <cstdlib>
+#include <iostream>
 
 /*
     ****Clases de métodos según el retorno****
-   
+
     Metodos que no retornan y metodos que retornan.
-    
-    El retorno hace referencia a un valor o estructura de datos que se envía a quien lo invoca a través de una
-    instrucción return dentro del cuerpo del método.
+
+    El retorno hace referencia a un valor o estructura de datos que se envía a
+   quien lo invoca a través de una instrucción return dentro del cuerpo del
+   método.
 
     Métodos que no retornan o funciones tipo void:
     Son metodos que no retornan el valor dentro de sus instrucciones.
-    La definición de public static será adoptada en este capitulo para desarrollar los métodos.
-    La palabra void se usa para declarar funciones que no retornan valor.
+    La definición de public static será adoptada en este capitulo para
+   desarrollar los métodos. La palabra void se usa para declarar funciones que
+   no retornan valor.
 
     Sintaxis de las funciones tipo void:
 
@@ -23,51 +25,50 @@
     }
 
 
-    El nombre dado al método debe cumplir con las normas para conformar nombres de variables y debe ser un verbo en infinitivo, ya que 
-    los métodos denotan acción y debe connotar o reflejar lo que hace el método.
+    El nombre dado al método debe cumplir con las normas para conformar nombres
+   de variables y debe ser un verbo en infinitivo, ya que los métodos denotan
+   acción y debe connotar o reflejar lo que hace el método.
 
 */
 
 class calcularPromedio {
 
 public:
-     static float sumarNumeros(int n) {
+  static float sumarNumeros(int n) {
 
-        float suma = 0;
-        int valor = 0; 
+    float suma = 0;
+    int valor = 0;
 
-          for (int i = 1; i <= n; i++ ) {
+    for (int i = 1; i <= n; i++) {
 
-            std::cout << "Ingrese el número " << i << ": ";
-            std::cin >> valor;
+      std::cout << "Ingrese el número " << i << ": ";
+      std::cin >> valor;
 
-            suma += valor;
-        }
-
-        return suma;
+      suma += valor;
     }
 
-     static float promedio(int n){
+    return suma;
+  }
 
-        float suma = sumarNumeros(n); // Llamamos a la primera funcion
+  static float promedio(int n) {
 
-        return suma / n;
-    }
+    float suma = sumarNumeros(n); // Llamamos a la primera funcion
+
+    return suma / n;
+  }
 
 }; // Las clases terminan en punto y coma.
 
-
 int main(void) {
-    int cantidad = 0;
+  int cantidad = 0;
 
-    std::cout << "Digite la cantidad de numero a promediar: ";
-        std::cin >> cantidad;
+  std::cout << "Digite la cantidad de numero a promediar: ";
+  std::cin >> cantidad;
 
-    float resultado = calcularPromedio::promedio(cantidad); // Llamamos a la clase calcularPromedio y a la funcion promedio
+  float resultado = calcularPromedio::promedio(
+      cantidad); // Llamamos a la clase calcularPromedio y a la funcion promedio
 
-    std::cout << "El promedio es: " << resultado << std::endl;
+  std::cout << "El promedio es: " << resultado << std::endl;
 
-    return 0;
+  return 0;
 }
-
-

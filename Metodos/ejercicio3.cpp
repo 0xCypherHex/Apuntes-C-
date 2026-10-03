@@ -1,19 +1,18 @@
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
 
 // Aqui invocaremos a nuestras clases mediante la cabecera
 #include "ejercicio3.hpp"
 
-int main (void) {
+int main(void) {
 
-    int cantidadDigitos = 0;
+  int cantidadDigitos = 0;
 
-    std::cout << "Ingrese la cantidad de digitos a promediar: ";
-        std::cin >> cantidadDigitos;
+  std::cout << "Ingrese la cantidad de digitos a promediar: ";
+  std::cin >> cantidadDigitos;
 
-        float resultado = sumPro::sumaPromedio(cantidadDigitos);
+  float resultado = sumPro::sumaPromedio(cantidadDigitos);
 
-    std::cout << "El promedio es: " << resultado << std::endl;
+  std::cout << "El promedio es: " << resultado << std::endl;
 
-    return 0;
+  return 0;
 }
