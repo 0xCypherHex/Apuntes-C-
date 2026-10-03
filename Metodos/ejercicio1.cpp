@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include <iostream>
 
 /*
@@ -7,14 +6,14 @@
     Metodos que no retornan y metodos que retornan.
 
     El retorno hace referencia a un valor o estructura de datos que se envía a
-   quien lo invoca a través de una instrucción return dentro del cuerpo del
-   método.
+    quien lo invoca a través de una instrucción return dentro del cuerpo del
+    método.
 
     Métodos que no retornan o funciones tipo void:
     Son metodos que no retornan el valor dentro de sus instrucciones.
     La definición de public static será adoptada en este capitulo para
-   desarrollar los métodos. La palabra void se usa para declarar funciones que
-   no retornan valor.
+    desarrollar los métodos. La palabra void se usa para declarar funciones que
+    no retornan valor.
 
     Sintaxis de las funciones tipo void:
 
@@ -26,8 +25,8 @@
 
 
     El nombre dado al método debe cumplir con las normas para conformar nombres
-   de variables y debe ser un verbo en infinitivo, ya que los métodos denotan
-   acción y debe connotar o reflejar lo que hace el método.
+    de variables y debe ser un verbo en infinitivo, ya que los métodos denotan
+    acción y debe connotar o reflejar lo que hace el método.
 
 */
 
