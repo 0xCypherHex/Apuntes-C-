@@ -7,12 +7,12 @@
     Diferencia entre la declaracion de métodos public y private
 
     Public (Publico): Estos métodos son los botones de la clase. Cualquier otra
-   parte del programa puede llamar a estos métodos. Definen lo que tu objeto
-   ofrece al resto del mundo.
+    parte del programa puede llamar a estos métodos. Definen lo que tu objeto
+    ofrece al resto del mundo.
 
     Private (Privado): Son los "mecanismos internos". Solo pueden ser llamados
-   por otros métodos que pertenezcan a la misma clase. El resto del programa no
-   tiene acceso a ellos y, si intenta usarlos, el compilador lanzará un error.
+    por otros métodos que pertenezcan a la misma clase. El resto del programa no
+    tiene acceso a ellos y, si intenta usarlos, el compilador lanzará un error.
 
 */
 #include <iostream>
