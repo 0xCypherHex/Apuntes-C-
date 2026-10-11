@@ -17,7 +17,7 @@ int main(void) {
 
   for (int iIndex = 0; iIndex < 5; iIndex++) {
 
-    printf("Introduzca el el total de ventas de la sucursal %d :", iIndex);
+    printf("Introduzca el total de ventas de la sucursal %d :", iIndex);
     scanf("%d", &aiVentasSucursales[iIndex]);
   }
 
