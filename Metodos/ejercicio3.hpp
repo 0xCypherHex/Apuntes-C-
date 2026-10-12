@@ -19,6 +19,7 @@
 //  SIN COMPLETAR
 
 #include <iostream>
+#include <cstdlib>
 
 class sumPro {
 
@@ -27,10 +28,11 @@ public:
 
     float suma = 0;
     float valor = 0;
+    float promedio = 0;
 
     for (int i = 1; i <= n; i++) {
 
-      std::cout << "Inserte el valor 1: " << valor;
+      std::cout << "Inserte el valor " << i << ": ";
       std::cin >> valor;
 
       suma += valor;
@@ -38,7 +40,9 @@ public:
 
     // Sacamos el promedio
 
-    float promedio = suma / n;
+    promedio = suma / n;
+    std::cout << "La suma de los " << n << " numeros es: " << suma << std::endl;
+    std::cout << "El promedio es: " << promedio << std::endl;
 
     return promedio;
   }
@@ -54,13 +58,12 @@ private: // Solo lo puede invocar un método de la misma clase
 
     for (int i = 1; i <= n; i++) {
 
-      std::cout << "Digite el valor :" << numero << std::endl;
+      std::cout << "Digite el valor " << i << ": ";
       std::cin >> numero;
 
       suma += numero;
-
-      return suma;
     }
+    return suma;
   }
 
   // Segundo método
