@@ -2,12 +2,11 @@
 #include <cstdlib>
 #include <vector>
 #include <string.h>
-
 /*
     Para añadir elementos al final de un vector tenemos que usar la herramienta push_back() 
     Esta es la principal herramienta para hacer que crezca un vector 
+*/
 
-    */
 
 int main (void) {
 
