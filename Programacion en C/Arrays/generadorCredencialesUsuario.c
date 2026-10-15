@@ -12,7 +12,8 @@ int main(void) {
   int iIndex = 0;
 
   printf("Introduzca su nombre y apellidos: ");
-  fgets(acNombreUsuarioEnCrudo, sizeof(acNombreUsuarioEnCrudo), stdin);
+  fgets(acNombreUsuarioEnCrudo, sizeof(acNombreUsuarioEnCrudo),
+        stdin); // Usamos fgets para que acepte espacios
 
   /*
   Si acNombreUsuarioEnCrudo[i] es un espacio en blanco,
