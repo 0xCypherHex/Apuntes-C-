@@ -6,15 +6,17 @@ los resultados formateados en pantalla.
 
 */
 
+#include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
-void vfInvertirCadena(char *cInicio, char *cFin);
+void vfInvertirCadena(char *pcCadenaTextoInicio, char *pcCadenaTextoFin);
 
 int main(void) {
 
   char cCadenaTexto[100] = {0};
   char *pcCadenaTexto = cCadenaTexto;
-  char cTextoInvertido[100] = {0};
+  char *pcAux = cCadenaTexto;
   int iCantidadVocales = 0;
   int iCantidadConsonantes = 0;
 
@@ -34,7 +36,8 @@ int main(void) {
   if (sLongitud > 0 && cCadenaTexto[sLongitud - 1] == '\n') {
 
     // Remplazar salto de linea por valor nulo
-    cCadenaTexto[sLongitud - 1] == '\0';
+
+    pcCadenaTexto[sLongitud - 1] = '\0';
 
     // Eliminamos una unidad a la variable que almacena la longitud porque ya no
     // tiene el salto de linea
@@ -42,40 +45,55 @@ int main(void) {
   }
 
   // Se detiene cuando llega al caracter nulo
-  while (*pcCadenaTexto != '\0') {
+  while (*pcAux != '\0') {
 
-    char cCadena = tolower(*pcCadenaTexto);
+    char cCadena = tolower(*pcAux);
 
     // Verificar si es consonante
-    if (cCadena >= 'a' && cCadena <= 'z') { // Esta linea sirve para que solo verifique palabras del abecedario
+    if (cCadena >= 'a' && cCadena <= 'z') { // Esta linea sirve para que solo
+                                            // verifique palabras del abecedario
 
-      if (cCadena == 'a' || cCadena == 'e' || cCadena == 'i' || cCadena == 'o' || cCadena == 'u') {
+      if (cCadena == 'a' || cCadena == 'e' || cCadena == 'i' ||
+          cCadena == 'o' || cCadena == 'u') {
 
         iCantidadVocales++;
-        
+
       } else {
 
         iCantidadConsonantes++;
       }
     }
+
+    pcAux++;
   }
 
-
-  printf("Texto original: %c\n", *cCadenaTexto),
+  printf("Texto original: %s\n", cCadenaTexto);
   printf("Cantidad de vocales: %d\n", iCantidadVocales);
   printf("Cantidad de consonantes: %d\n", iCantidadConsonantes);
 
-  // Llamar a la función para invertir el texto
-  vfInvertirCadena(*pcCadenaTexto, *pcCadenaTexto + sLongitud - 1);
-  printf("Texto invertido: %c\n", *pcCadenaTexto);
+  if (sLongitud > 0) {
+    // Llamar a la función para invertir el texto
+    vfInvertirCadena(pcCadenaTexto, pcCadenaTexto + sLongitud - 1);
+    printf("Texto invertido: %s\n", pcCadenaTexto);
+  } else {
+
+    printf("Error no se ingreso nada.\n");
+  }
 
   return 0;
 }
 
-void vfInvertirCadena(char *cInicio, char *cFin) {
+void vfInvertirCadena(char *pcCadenaTextoInicio, char *pcCadenaTextoFin) {
 
-  for (*cInicio; cInicio < *cFin; cInicio++){
-    
+  while (pcCadenaTextoInicio < pcCadenaTextoFin) {
+
+    // Metodo de la burbuja
+
+    char cAuxiliar = *pcCadenaTextoInicio;
+    *pcCadenaTextoInicio = *pcCadenaTextoFin;
+    *pcCadenaTextoFin = cAuxiliar;
+
+    pcCadenaTextoInicio++;
+    pcCadenaTextoFin--;
   }
-  
 }
