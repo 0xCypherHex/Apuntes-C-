@@ -8,19 +8,19 @@ de punteros.
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+
+  int *aiPtr[100];
+
+} StPunteros;
 
 int main(void) {
 
   int iNumeros = 0;
 
-  typedef struct {
-
-    int iTamaño;
-    int *iArreglo[100];
-
-  } memoria_dinamica;
-
-  memoria_dinamica p1;
+  StPunteros p1;
 
   printf("Ingrese la cantidad deseada de números: ");
   scanf("%d", &iNumeros);
@@ -33,8 +33,9 @@ int main(void) {
 
   // Usamos sizeof para obtener el tamaño en bytes
 
-  *p1.iArreglo = NULL;
-  p1.iTamaño = malloc(iNumeros * sizeof(int));
+  *p1.aiPtr = NULL;
+  *p1.aiPtr = malloc(iNumeros * sizeof(int));
 
+  free(p1.aiPtr);
   return 0;
 }
