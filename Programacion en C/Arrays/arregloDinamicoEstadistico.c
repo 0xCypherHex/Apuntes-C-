@@ -9,23 +9,27 @@ de punteros.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct {
 
-  int *aiPtr[100];
+  int *aiPtr;
 
 } StPunteros;
 
 int main(void) {
 
-  int iNumeros = 0;
-
   StPunteros p1;
+
+  int iNumeros = 0;
+  int iSuma = 0;
+  float fPromedio = 0;
+
 
   printf("Ingrese la cantidad deseada de números: ");
   scanf("%d", &iNumeros);
 
-  if (iNumeros > 0) {
+  if (iNumeros <= 0) {
 
     printf("Cantidad ingresada incorrecta.\n");
     return 1;
@@ -33,8 +37,44 @@ int main(void) {
 
   // Usamos sizeof para obtener el tamaño en bytes
 
-  *p1.aiPtr = NULL;
-  *p1.aiPtr = malloc(iNumeros * sizeof(int));
+  p1.aiPtr = NULL;
+  p1.aiPtr = malloc(iNumeros * sizeof(int));
+
+  if(p1.aiPtr == NULL){
+
+    printf("No se pudo asignar memoria.\n");
+    return 1;
+  }
+
+  printf("Introduzca los %d números en el arreglo... ", iNumeros);
+
+  for (int iIndex = 0; iIndex < iNumeros; iIndex++){
+
+    printf("Elemento %d: ", iIndex + 1);
+    scanf("%d", &p1.aiPtr[iIndex]);
+  }
+
+  int iMaximo = p1.aiPtr[0];
+
+  //  Calcular promedio y valor máximo
+
+  for (int iIndex = 0; iIndex < iNumeros; iIndex++){
+
+    iSuma += p1.aiPtr[iIndex];
+    
+    if (p1.aiPtr[iIndex] > iMaximo){
+
+      iMaximo = p1.aiPtr[iIndex];
+    }
+
+  }
+
+  fPromedio = iSuma / iNumeros;
+
+  printf("\n--- Resultados ---\n");
+  printf("Suma total: %d\n", iSuma);
+  printf("Promedio: %.2f\n", fPromedio);
+  printf("Valor máximo: %d\n", iMaximo);
 
   free(p1.aiPtr);
   return 0;
