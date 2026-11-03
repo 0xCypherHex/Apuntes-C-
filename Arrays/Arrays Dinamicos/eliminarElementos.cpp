@@ -17,8 +17,6 @@ if (it != numbers.end()) {
 */
 
 #include <algorithm>
-#include <cstddef>
-#include <cstring>
 #include <iostream>
 #include <vector>
 
