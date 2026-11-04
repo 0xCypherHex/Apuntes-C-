@@ -47,6 +47,7 @@ int main(void) {
 
     printf("Desea asignar otro proceso ? (s/n)");
     fgets(cChar, sizeof(cChar), stdin);
+    // Eliminar caracter de nueva linea de fgets con strcspn
     cChar[strcspn(cChar, "\n")] = 0;
 
     if (*cChar == 's') {
@@ -63,10 +64,10 @@ int main(void) {
       iValue = 0;
     }
 
-  } while (iValue ==
-           1); // Eliminar caracter de nueva linea de fgets con strcspn
+  } while (iValue == 1);
 
   // Imprimir tabla
+  vfImprimirTabla(ipProcess, iNumItems);
 
   free(ipProcess);
   ipProcess = NULL;
@@ -113,9 +114,12 @@ void vfImprimirTabla(struct StProcess *psTabla, int iTotal) {
   printf("PID\t\tNOMBRE\t\tMEMORIA (MB)\n");
   printf("---------------------------------------------------\n");
 
-  // TODO: Recorre desde 0 hasta iTotal.
-  // Puedes usar un puntero auxiliar que avance con ++ y acceder con ->
-  // Imprime cada proceso y acumula su memoria en fSumaMemoria.
+  for (int iIndex = 0; iIndex < iTotal; iIndex++) {
+
+    printf("%d\t\t %s\t\t %.2f\n", psTabla[iIndex].iPID,
+           psTabla[iIndex].cNombreProceso, psTabla[iIndex].fMemoriaMB);
+    fSumaMemoria += psTabla[iIndex].fMemoriaMB;
+  }
 
   printf("---------------------------------------------------\n");
   printf("Total de procesos: %d | Memoria Total: %.2f MB\n", iTotal,
