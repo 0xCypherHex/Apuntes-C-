@@ -1,7 +1,5 @@
 // Gestor de Subred y nodos activos
 
-#include <cstdio>
-#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
